@@ -1,0 +1,63 @@
+Git Commands For first time checkin:
+ First create repository in github where you want to commit the code
+ Now got to the location in local from where you want to commit the code to Git :  /c/rahul/study/udemy/java-8/project/demo
+ Make sure with ls command this will give the folder where you are 
+  git init
+ Then copy https link of the repository from github. run below command with https link
+  git remote add origin https://github.com/rahul-x-saxena/udemyjava.git
+ Check if you are allowed for push pull
+  git remote -v
+ If you want to commit all the files then we will
+  git add .
+  git commit -m "Udemy java8 project"
+ If you are doing commit for the first time then you will land up with some error like who you are
+		 *** Please tell me who you are.
+
+		Run
+
+		  git config --global user.email "you@example.com"
+		  git config --global user.name "Your Name"
+
+		to set your account's default identity.
+		Omit --global to set the identity only in this repository.
+
+		fatal: unable to auto-detect email address (got 'RAHUL SAXENA@RAHULSAXENA-HP.(none)')
+ Now you will have to run 2 commands to give the identity
+  git config --global user.email "rahul.x.saxena@gmail.com"
+  git config --local user.name "rahul-x-saxena"
+ To confirm that your username and emailId is reflecting please run below command
+  git config --list
+ With this you should be able to see your username and emailId
+ Again go ahead with 
+  git commit -m "demo commit"
+ Check your commit is successful or not, for that you should be able to see your git commit message in ref logs
+  git reflog
+ To push the changes 
+   git push origin master
+   Here you might be asked for username and password popup. So we will have to give username and password there
+   once authentication is done you will see your changes are committed and pushed in master branch
+   
+    Logon failed, use ctrl+c to cancel basic credential prompt.
+	Enumerating objects: 41, done.
+	Counting objects: 100% (41/41), done.
+	Delta compression using up to 4 threads
+	Compressing objects: 100% (36/36), done.
+	Writing objects: 100% (41/41), 20.00 KiB | 1.33 MiB/s, done.
+	Total 41 (delta 1), reused 0 (delta 0), pack-reused 0
+	remote: Resolving deltas: 100% (1/1), done.
+	remote:
+	remote: Create a pull request for 'master' on GitHub by visiting:
+	remote:      https://github.com/rahul-x-saxena/udemyjava/pull/new/master
+	remote:
+	To https://github.com/rahul-x-saxena/udemyjava.git
+	 * [new branch]      master -> master
+	 
+ you can also take help for git help command
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
